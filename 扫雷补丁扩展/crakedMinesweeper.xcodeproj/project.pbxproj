@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50CC91DA21C6722900B1A338 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CC91D921C6722900B1A338 /* AppKit.framework */; };
+		50CC91DC21C6722900B1A338 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CC91DB21C6722900B1A338 /* Foundation.framework */; };
+		50CC91E021C6722900B1A338 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50CC91DF21C6722900B1A338 /* Info.plist */; };
+		50CC91E321C6722A00B1A338 /* crakedMinesweeper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CC91E221C6722A00B1A338 /* crakedMinesweeper.m */; };
+		50CC91E721C6722A00B1A338 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CC91E621C6722A00B1A338 /* JRSwizzle.m */; };
+		50CC91E921C6722A00B1A338 /* PrefixHeader.pch in Resources */ = {isa = PBXBuildFile; fileRef = 50CC91E821C6722A00B1A338 /* PrefixHeader.pch */; };
+		50CC91F321C6772900B1A338 /* GameState+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CC91F221C6772900B1A338 /* GameState+Hook.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		50CC91D621C6722900B1A338 /* crakedMinesweeper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = crakedMinesweeper.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		50CC91D921C6722900B1A338 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		50CC91DB21C6722900B1A338 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		50CC91DF21C6722900B1A338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50CC91E121C6722900B1A338 /* crakedMinesweeper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crakedMinesweeper.h; sourceTree = "<group>"; };
+		50CC91E221C6722A00B1A338 /* crakedMinesweeper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = crakedMinesweeper.m; sourceTree = "<group>"; };
+		50CC91E521C6722A00B1A338 /* JRSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JRSwizzle.h; path = JRSwizzle/JRSwizzle.h; sourceTree = "<group>"; };
+		50CC91E621C6722A00B1A338 /* JRSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = JRSwizzle/JRSwizzle.m; sourceTree = "<group>"; };
+		50CC91E821C6722A00B1A338 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		50CC91F021C6759000B1A338 /* GameState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
+		50CC91F121C676B000B1A338 /* GameState+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameState+Hook.h"; sourceTree = "<group>"; };
+		50CC91F221C6772900B1A338 /* GameState+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GameState+Hook.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50CC91D321C6722900B1A338 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50CC91DA21C6722900B1A338 /* AppKit.framework in Frameworks */,
+				50CC91DC21C6722900B1A338 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50CC91CD21C6722900B1A338 = {
+			isa = PBXGroup;
+			children = (
+				50CC91DD21C6722900B1A338 /* crakedMinesweeper */,
+				50CC91D821C6722900B1A338 /* Frameworks */,
+				50CC91D721C6722900B1A338 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50CC91D721C6722900B1A338 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50CC91D621C6722900B1A338 /* crakedMinesweeper.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50CC91D821C6722900B1A338 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50CC91D921C6722900B1A338 /* AppKit.framework */,
+				50CC91DB21C6722900B1A338 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50CC91DD21C6722900B1A338 /* crakedMinesweeper */ = {
+			isa = PBXGroup;
+			children = (
+				61A787CD21C67B3900C5E86E /* HookClasses */,
+				61A787CC21C67AFB00C5E86E /* Sources */,
+				50CC91E121C6722900B1A338 /* crakedMinesweeper.h */,
+				50CC91E221C6722A00B1A338 /* crakedMinesweeper.m */,
+				50CC91E421C6722A00B1A338 /* JRSwizzle */,
+				50CC91DE21C6722900B1A338 /* Supporting Files */,
+			);
+			path = crakedMinesweeper;
+			sourceTree = "<group>";
+		};
+		50CC91DE21C6722900B1A338 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50CC91DF21C6722900B1A338 /* Info.plist */,
+				50CC91E821C6722A00B1A338 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50CC91E421C6722A00B1A338 /* JRSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				50CC91E521C6722A00B1A338 /* JRSwizzle.h */,
+				50CC91E621C6722A00B1A338 /* JRSwizzle.m */,
+			);
+			name = JRSwizzle;
+			sourceTree = "<group>";
+		};
+		61A787CC21C67AFB00C5E86E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				50CC91F021C6759000B1A338 /* GameState.h */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		61A787CD21C67B3900C5E86E /* HookClasses */ = {
+			isa = PBXGroup;
+			children = (
+				50CC91F121C676B000B1A338 /* GameState+Hook.h */,
+				50CC91F221C6772900B1A338 /* GameState+Hook.m */,
+			);
+			name = HookClasses;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50CC91D521C6722900B1A338 /* crakedMinesweeper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50CC91EC21C6722A00B1A338 /* Build configuration list for PBXNativeTarget "crakedMinesweeper" */;
+			buildPhases = (
+				50CC91D221C6722900B1A338 /* Sources */,
+				50CC91D321C6722900B1A338 /* Frameworks */,
+				50CC91D421C6722900B1A338 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = crakedMinesweeper;
+			productName = crakedMinesweeper;
+			productReference = 50CC91D621C6722900B1A338 /* crakedMinesweeper.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50CC91CE21C6722900B1A338 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = ustc.biu;
+				TargetAttributes = {
+					50CC91D521C6722900B1A338 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 50CC91D121C6722900B1A338 /* Build configuration list for PBXProject "crakedMinesweeper" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 50CC91CD21C6722900B1A338;
+			productRefGroup = 50CC91D721C6722900B1A338 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50CC91D521C6722900B1A338 /* crakedMinesweeper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50CC91D421C6722900B1A338 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50CC91E921C6722A00B1A338 /* PrefixHeader.pch in Resources */,
+				50CC91E021C6722900B1A338 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50CC91D221C6722900B1A338 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50CC91E721C6722A00B1A338 /* JRSwizzle.m in Sources */,
+				50CC91E321C6722A00B1A338 /* crakedMinesweeper.m in Sources */,
+				50CC91F321C6772900B1A338 /* GameState+Hook.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		50CC91EA21C6722A00B1A338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		50CC91EB21C6722A00B1A338 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		50CC91ED21C6722A00B1A338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEVELOPMENT_TEAM = 3BM33684GY;
+				DSTROOT = /;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = crakedMinesweeper/PrefixHeader.pch;
+				INFOPLIST_FILE = crakedMinesweeper/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/SIMBL/Plugins";
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ustc.biu.crakedMinesweeper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		50CC91EE21C6722A00B1A338 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEVELOPMENT_TEAM = 3BM33684GY;
+				DSTROOT = /;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = crakedMinesweeper/PrefixHeader.pch;
+				INFOPLIST_FILE = crakedMinesweeper/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/SIMBL/Plugins";
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ustc.biu.crakedMinesweeper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50CC91D121C6722900B1A338 /* Build configuration list for PBXProject "crakedMinesweeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50CC91EA21C6722A00B1A338 /* Debug */,
+				50CC91EB21C6722A00B1A338 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50CC91EC21C6722A00B1A338 /* Build configuration list for PBXNativeTarget "crakedMinesweeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50CC91ED21C6722A00B1A338 /* Debug */,
+				50CC91EE21C6722A00B1A338 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50CC91CE21C6722900B1A338 /* Project object */;
+}

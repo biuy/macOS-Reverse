@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  crakedMinesweeper
+//
+//  Created by biu on 2018/12/16.
+//Copyright © 2018 ustc.biu. All rights reserved.
+//
+
+#ifndef crakedMinesweeper_PrefixHeader_pch
+#define crakedMinesweeper_PrefixHeader_pch
+
+#import <Cocoa/Cocoa.h>
+#import "JRSwizzle.h"
+
+#endif
+
